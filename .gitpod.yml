@@ -1,15 +1,12 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - before: |
-      echo "source ~/.ghcup/env" >> ~/.bashrc
-      source ~/.ghcup/env
+  - before:
+      echo "Preparing...."
     init: |
-      source ~/.ghcup/env
       cabal update
       stack build
     command: |
-      source ~/.ghcup/env
       stack test
 
 vscode:
