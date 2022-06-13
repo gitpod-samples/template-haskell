@@ -2,6 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - init: |
+      source ~/.ghcup/env
       cabal update
       stack build
 
