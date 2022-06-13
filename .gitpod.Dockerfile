@@ -15,10 +15,3 @@ RUN ghcup install ghc
 RUN ghcup install hls
 RUN ghcup install stack
 RUN ghcup install cabal
-
-# Change stack's configuration to use system installed ghc.
-# By default, stack tool will download its own version of the compiler,
-# Setting up this configuration will avoid downloading haskell compiler twice.
-# WARNING! Maybe this is not adequate for your project! use your project wise stack.yaml to change this
-RUN stack config set install-ghc --global false
-RUN stack config set system-ghc --global true 
