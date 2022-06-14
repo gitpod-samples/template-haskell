@@ -13,7 +13,7 @@ copyright:           2021 Gitpod
 build-type:          Simple
 extra-doc-files:     README.md
                      CHANGELOG.md
-tested-with:         GHC == 8.8.3
+tested-with:         GHC == 8.10.7
 
 source-repository head
   type:                git
