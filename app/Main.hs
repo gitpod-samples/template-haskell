@@ -1,7 +1,6 @@
-module Main (main) where
+module Main where
 
-import GitpodTemplate (someFunc)
-
+import Lib
 
 main :: IO ()
 main = someFunc
