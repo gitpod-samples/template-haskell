@@ -11,7 +11,13 @@ RUN sudo curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ENV PATH=${PATH}:${HOME}/.ghcup/bin
 
 # Set up the environment. This will install the default versions of every tool.
-RUN ghcup install ghc
+RUN ghcup install ghc 9.0.2
 RUN ghcup install hls
 RUN ghcup install stack
-RUN ghcup install cabal
+
+# Change stack's configuration to use system installed ghc.
+# By default, stack tool will download its own version of the compiler,
+# Setting up this configuration will avoid downloading haskell compiler twice.
+# WARNING! Maybe this is not adequate for your project! Use your project's stack.yaml to change this
+RUN stack config set install-ghc --global false
+RUN stack config set system-ghc --global true 
