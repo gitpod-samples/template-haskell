@@ -2,7 +2,7 @@ cabal-version:       2.4
 name:                GitpodTemplate
 version:             0.0.0.0
 synopsis:            See README for more info
-description:         See README for more info
+description:         This is an example of a haskell program ready to be used in gitpod.io
 homepage:            https://github.com/gitpod/GitpodTemplate
 bug-reports:         https://github.com/gitpod/GitpodTemplate/issues
 license:             MIT
@@ -11,6 +11,7 @@ author:              Gitpod
 maintainer:          Gitpod <contact@gitpod.io>
 copyright:           2021 Gitpod
 build-type:          Simple
+category:            Example
 extra-doc-files:     README.md
                      CHANGELOG.md
 tested-with:         GHC == 8.10.7
