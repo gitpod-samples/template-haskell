@@ -20,4 +20,4 @@ To get started with Haskell on Gitpod, add a [`.gitpod.yml`](./.gitpod.yml) file
 
 ## Notes & caveats
 
-There is no template haskell in this haskell template 🙊🧡
+Notice that this template completely overrides the `.cabal` and `stack.yaml` files. This is done because we need to create a fresh project in order to set good defaults for `base` and stackage snapshot. This is rarely what you want for your project. To avoid overriding go to the `.gitpod.Dockerfile` file and follow the instruction on removing parts

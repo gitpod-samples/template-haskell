@@ -23,6 +23,10 @@ RUN ghcup install cabal
 RUN stack config set install-ghc --global false
 RUN stack config set system-ghc --global true 
 
+# If you want to use your own cabal / stack file delete from here to the end of the file
+# ********* DELETE FROM HERE **********
+#  v v v v v v v v v v v v v v v v v v 
+
 # Generate the right cabal file. Using cabal init after ghc installation ensures that the right version of base is used
 # Otherwise, the template would become deprecated as long as ghcup decides to pick up a different version of ghc.
 RUN cabal init \
