@@ -2,6 +2,7 @@ cabal-version:      2.4
 name:               gitpod-template
 version:            0.1.0.0
 synopsis:           See README for more info
+tested-with:        GHC==8.10.7
 
 -- A longer description of the package.
 -- description:
