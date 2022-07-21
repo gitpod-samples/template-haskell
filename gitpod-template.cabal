@@ -22,7 +22,7 @@ extra-source-files:
     README.md
 
 library
-    exposed-modules:  GitpodTemplate
+    exposed-modules:  MyLib
 
     -- Modules included in this library but not exported.
     -- other-modules:
@@ -41,7 +41,10 @@ executable gitpod-template
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
-    build-depends:    base ^>=4.14.3.0
+    build-depends:
+        base ^>=4.14.3.0,
+        gitpod-template
+
     hs-source-dirs:   app
     default-language: Haskell2010
 

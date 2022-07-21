@@ -1,7 +1,8 @@
-module Main (main) where
+module Main where
 
-import GitpodTemplate (someFunc)
-
+import qualified MyLib (someFunc)
 
 main :: IO ()
-main = someFunc
+main = do
+  putStrLn "Hello, Haskell!"
+  MyLib.someFunc
