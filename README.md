@@ -16,8 +16,10 @@ Click the above "Open in Gitpod" button to start a new workspace. Once you're re
 
 ### An existing project
 
-To get started with Haskell on Gitpod, add a [`.gitpod.yml`](./.gitpod.yml) file and the [`.gitpod.Dockerfile`](./.gitpod.Dockerfile) which contains the configuration to improve the developer experience on Gitpod. To learn more, please see the [Getting Started](https://www.gitpod.io/docs/getting-started) documentation.
+If you have an existing project and you want to create a gitpod environment for it, you need to follow take into account this considerations.
 
-## Notes & caveats
-
-There is no template haskell in this haskell template 🙊🧡
+- This repo's Dockerfile **completely overwrites** the `cabal` and `stack` files when building the container. This means, that if you simply copy-paste the `.gitpod.Dockerfile`, your `cabal`/`stack` files will disappear. Follow the instructions within `.gitpod.Dockerfile` to change this behaviour.
+- This repo uses `ghcup` to install all the tooling. Alternative instalation isn't recomended
+- If you are using `stack` it is **highly** recommended to disallow it from installing `ghc` on its own. Otherwise, you'll encounter problems when integrating with `haskell-language-protocol`. To configure `stack` properly, run the following:
+  - `stack config set install-ghc --global false`
+  - `stack config set system-ghc --global true`
