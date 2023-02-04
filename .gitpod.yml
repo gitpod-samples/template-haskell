@@ -1,8 +1,21 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - init:
-      stack build
+  - command:
+      cabal init
+        --license=MIT
+        --homepage=https://github.com/gitpod-io/template-haskell
+        --author=Gitpod
+        --category=Example
+        --email=contact@gitpod.io
+        --package-name=gitpod-template
+        --synopsis="See README for more info"
+        --libandexe
+        --tests
+        --test-dir=test
+        --overwrite
+      && stack init --force
+      && stack build
 vscode:
   extensions:
     - haskell.haskell
